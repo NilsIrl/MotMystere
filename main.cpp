@@ -6,29 +6,36 @@ using namespace std;
 int main()
 {
     // 1 Demander le mot à deviner
+
     string motATrouver("");
-    cout << "Saysissez un mot : ";
-    cin >> motATrouver;
-    for(int x(0);x<40;x++){
-        cout << endl;
-    }
-
-    // 2 Générer un mot mystère
-
-    string motEncrypter(melangeMot(motATrouver));
-
-
-    // 3 Demander le mot en boucle
-    string tempString("");
+    string rejouer("");
     do {
-        cout << endl << "Quel est ce mot " << motEncrypter << " ? : ";
-        cin >> tempString;
-        if(tempString == motATrouver) {
-            break;
-        } else {
-            cout << "Ce n'est pas le mot !!" << endl;
+        cout << "Saysissez un mot : ";
+        cin >> motATrouver;
+        for(int x(0);x<40;x++){
+            cout << endl;
         }
-    } while(true);
-    cout << "BRAVO !!!!!!!!!" << endl;
+
+        // 2 Générer un mot mystère
+
+        string motEncrypter(melangeMot(motATrouver));
+
+
+        // 3 Demander le mot en boucle
+        string tempString("");
+        do {
+            cout << endl << "Quel est ce mot " << motEncrypter << " ? : ";
+            cin >> tempString;
+            if(tempString == motATrouver) {
+                break;
+            } else {
+                cout << "Ce n'est pas le mot !!" << endl;
+            }
+        } while(true);
+        cout << "BRAVO !!!!!!!!!" << endl;
+        cout << "Voulez vous rejouer (O/N) ? : ";
+        cin >> rejouer;
+
+    } while(rejouer == "O");
     return 0;
 }
