@@ -20,7 +20,7 @@ int main()
 
     // 3 Demander le mot en boucle
     string tempString("");
-    while(true) {
+    do {
         cout << endl << "Quel est ce mot " << motEncrypter << " ? : ";
         cin >> tempString;
         if(tempString == motATrouver) {
@@ -28,7 +28,7 @@ int main()
         } else {
             cout << "Ce n'est pas le mot !!" << endl;
         }
-    }
+    } while(true);
     cout << "BRAVO !!!!!!!!!" << endl;
     return 0;
 }
