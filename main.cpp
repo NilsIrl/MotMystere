@@ -9,6 +9,9 @@ int main()
     string motATrouver("");
     cout << "Saysissez un mot : ";
     cin >> motATrouver;
+    for(int x(0);x<40;x++){
+        cout << endl;
+    }
 
     // 2 Générer un mot mystère
 
