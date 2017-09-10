@@ -10,13 +10,12 @@ int main()
     int const LINEJUMPS(40);
     // 1 Demander le mot à deviner
 
-    string motATrouver("");
+    string motATrouver;
     string rejouer("");
 
     vector<int> triesList;
     do {
-        cout << "Saysissez un mot : ";
-        cin >> motATrouver;
+        motATrouver = choisirMot();
         for(int x(0);x<LINEJUMPS;x++){
             cout << endl;
         }
@@ -41,8 +40,9 @@ int main()
                 triesNum++;
                 cout << "Il vous reste " << TRIES-triesNum << " essais." << endl;
             }
-            if(triesNum == 0) {
+            if(triesNum == TRIES) {
                 cout << "Perdu :(" << endl;
+                cout << "Le mot était : '" << motATrouver << "'" << endl;
             }
         } while(true && triesNum < TRIES);
         cout << "Voulez vous rejouer (O/N) ? : ";

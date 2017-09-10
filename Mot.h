@@ -4,5 +4,6 @@
 #include <string>
 
 std::string melangeMot(std::string mot);
+std::string choisirMot();
 
 #endif // MOT_H_INCLUDED
