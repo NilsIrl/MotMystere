@@ -24,13 +24,12 @@ string melangeMot(string mot) {
 }
 
 string choisirMot() {
-    boost::random::mt19937 rng;
-    boost::random::uniform_int_distribution<> nombre(0, 323576);
-    int random_int = nombre(rng);
+    srand(time(0));
+    long random_int = rand();
     cout << random_int << endl;
     ifstream file("dico.txt");
     string ligne;
-    for(int x(0);x <= random_int;x++){
+    for(long x(0);x <= random_int;x++){
         file >> ligne;
     }
     return ligne;

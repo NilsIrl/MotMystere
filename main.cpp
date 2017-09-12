@@ -49,11 +49,15 @@ int main()
         cin >> rejouer;
 
     } while(rejouer == "O");
-    int result = 0;
-    for(unsigned int x=0;x<triesList.size();x++) {
-        result += triesList[x];
+    if(triesList.size() != 0){
+        int result = 0;
+        for(unsigned int x=0;x<triesList.size();x++) {
+            result += triesList[x];
+        }
+        result /= triesList.size();
+        cout << "Votre moyenne est de " << result << "essais !" << endl;
+    } else {
+        cout << "Vous n'avez pas gagné." << endl;
     }
-    result /= triesList.size();
-    cout << "Votre moyenne est de " << result << "essais !" << endl;
     return 0;
 }
